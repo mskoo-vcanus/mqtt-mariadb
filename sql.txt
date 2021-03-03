@@ -1,0 +1,64 @@
+create table can_height(
+id bigint(225) not null primary key auto_increment,
+height float default null,
+datetime datetime default null);
+
+create table can_weight(
+id bigint(225) not null primary key auto_increment,
+weight float default null,
+datetime datetime default null);
+
+create table Tplastic_height(
+id bigint(225) not null primary key auto_increment,
+height float default null,
+datetime datetime default null);
+
+create table Tplastic_weight(
+id bigint(225) not null primary key auto_increment,
+weight float default null,
+datetime datetime default null);
+
+create table glass_height(
+id bigint(225) not null primary key auto_increment,
+height float default null,
+datetime datetime default null);
+
+create table glass_weight(
+id bigint(225) not null primary key auto_increment,
+weight float default null,
+datetime datetime default null);
+
+create table plastic_height(
+id bigint(225) not null primary key auto_increment,
+height float default null,
+datetime datetime default null);
+
+create table plastic_weight(
+id bigint(225) not null primary key auto_increment,
+weight float default null,
+datetime datetime default null);
+
+create table h2s(
+id bigint(225) not null primary key auto_increment,
+ppm int(11) default null,
+datetime datetime default null);
+
+create table nh3(
+id bigint(225) not null primary key auto_increment,
+ppm int(11) default null,
+datetime datetime default null);
+
+create table vocs(
+id bigint(225) not null primary key auto_increment,
+ppm int(11) default null,
+datetime datetime default null);
+
+create table humi(
+id bigint(225) not null primary key auto_increment,
+humi int(5) default null,
+datetime datetime default null);
+
+create table temp(
+id bigint(225) not null primary key auto_increment,
+temp int(5) default null,
+datetime datetime default null);
