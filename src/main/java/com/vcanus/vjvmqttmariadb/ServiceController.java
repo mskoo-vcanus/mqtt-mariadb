@@ -68,6 +68,9 @@ public class ServiceController {
         logger.debug("Message received: topic={}, payload={}", topic, datas);
         String[] values = new String(datas).split(",");
         float[] fValues = new float[values.length];
+        if(fValues.length!=2){
+            return;
+        }
         for(int i=0; i<fValues.length; i++){
             fValues[i] = Float.parseFloat(values[i]);
         }
