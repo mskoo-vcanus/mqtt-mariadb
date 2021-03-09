@@ -132,7 +132,7 @@ public class ServiceController {
         }
         try {
             clientMqtt.setSubscription(topic, listener);
-//            clientMqtt.setSubscription(topic, (topic, msg) -> {
+            //            clientMqtt.setSubscription(topic, (topic, msg) -> {
 //                /* msg process */
 //                byte[] payload = msg.getPayload();
 //                String datas = bArr2String(payload);
@@ -177,7 +177,6 @@ public class ServiceController {
 //            clientMqtt.publish("data/device3/can", byteData1);
 //            clientMqtt.publish("data/device4/can", byteData2);
 
-
         } catch (Exception e) {
             logger.error("/subscrive error : " + e.getMessage());
         }
@@ -220,15 +219,15 @@ public class ServiceController {
         return Timestamp.valueOf(ldt); // 2021-02-18 01:06:55.323
     }
 
-    public static float[] bArr2fArr(byte[] buffer) throws IOException {
-        ByteArrayInputStream bas = new ByteArrayInputStream(buffer);
-        DataInputStream ds = new DataInputStream(bas);
-        float[] fArr = new float[buffer.length / 4];  // 4 bytes per float
-        for (int i = 0; i < fArr.length; i++)
-        {
-            fArr[i] = ds.readFloat();
-        }
-        return fArr;
-    }
+//    public static float[] bArr2fArr(byte[] buffer) throws IOException {
+//        ByteArrayInputStream bas = new ByteArrayInputStream(buffer);
+//        DataInputStream ds = new DataInputStream(bas);
+//        float[] fArr = new float[buffer.length / 4];  // 4 bytes per float
+//        for (int i = 0; i < fArr.length; i++)
+//        {
+//            fArr[i] = ds.readFloat();
+//        }
+//        return fArr;
+//    }
 
 }
